@@ -64,3 +64,11 @@ function bankRobbery(){
 
 
 // 217. 함수 표현식
+// function add(x, y) {
+// 	return x + y;
+// }
+const add = function (x, y){
+	return x + y;
+}
+add(3,4)
+// 7
