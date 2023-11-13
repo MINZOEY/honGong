@@ -132,3 +132,35 @@ const sortMath =  {
 		return x * x;
 	}
 };
+
+// 221. this라는 불가사의한 키워드
+const person = {
+	first: 'hi',
+	last: 'bye',
+	fullName(){
+		return `${this.first} ${this.last}`
+	}
+}
+person.fullName(); // 'hi bye'
+person.last = 'hello';
+person.fullName(); //'hi hello'
+
+const cat = {
+	name : 'blue steele',
+	color : 'grey',
+	breed : 'scottish fold',
+	meow(){
+		console.log(`${this.name} says Meowwww`);
+	}
+} 
+cat.meow() //blue steele says Meowwww
+
+// 222. try / catch 사용하기
+function string(msg){
+	try{
+		console.log(msg.toUpperCase().repeat(3));
+	}catch(e){
+		console.log(e);
+		console.log("한글을 입력하세요!");
+	}
+}
