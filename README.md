@@ -151,7 +151,8 @@
 	evens.reduce((sum, num) => sum + num, 40)이면 60
 
 	- ⭐️ 이렇게 두번째 인수를 따로 지정할 수 있고 그 인수가 reduce함수의 초기값이 된다!!!!
-	![reduceEx](images/reduceImg.png)
+
+![reduceEx](images/reduceImg.png)
 
 234. 화살표 함수와 'this'
 
