@@ -105,7 +105,7 @@
 	두번째 매개변수인, 각각의 숫자인 currentValue는 마음대로 부를 수 있음(💡각각의 개별 요소 나타냄)
 	- 저 식을 해석하자면 
 	반환된 값을 바로 그 다음 번 순회의 accumulator에 사용됨
-	![Alt text](<스크린샷 2023-11-13 오후 6.57.21.png>)
+	![reduceEx](images/reduceImg.png)
 	
 
 	- const evens = [2,4,6,8];
