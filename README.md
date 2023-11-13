@@ -138,7 +138,7 @@
 	두번째 매개변수인, 각각의 숫자인 currentValue는 마음대로 부를 수 있음(💡각각의 개별 요소 나타냄)
 	- 저 식을 해석하자면 
 	반환된 값을 바로 그 다음 번 순회의 accumulator에 사용됨
-	![reduceEx](images/reduceImg.png)
+	- ![reduceEx](images/reduceImg.png)
 	
 
 	- const evens = [2,4,6,8];
@@ -159,5 +159,5 @@
 	- 'this'키워드는 함수가 만든 범위와 아무 관련 없고 함수를 실행하는 방법과 관련있다.
 
 	- 하지만 화살표 함수는 그렇지 않다!!!
-	
+
 	- ⭐️ 일반 함수와 달리 화살표 함수에서 this 키워드는 다르게 동작한다.
