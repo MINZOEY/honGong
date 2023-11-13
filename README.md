@@ -138,7 +138,6 @@
 	두번째 매개변수인, 각각의 숫자인 currentValue는 마음대로 부를 수 있음(💡각각의 개별 요소 나타냄)
 	- 저 식을 해석하자면 
 	반환된 값을 바로 그 다음 번 순회의 accumulator에 사용됨
-	- ![reduceEx](images/reduceImg.png)
 	
 
 	- const evens = [2,4,6,8];
@@ -151,8 +150,8 @@
 	그렇다면 120이 출력됨
 	evens.reduce((sum, num) => sum + num, 40)이면 60
 
-
 	- ⭐️ 이렇게 두번째 인수를 따로 지정할 수 있고 그 인수가 reduce함수의 초기값이 된다!!!!
+	![reduceEx](images/reduceImg.png)
 
 234. 화살표 함수와 'this'
 
