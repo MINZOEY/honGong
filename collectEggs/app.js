@@ -90,3 +90,45 @@ function rollDie(){
 
 callTwice(rollDie);
 callTenTimes(rollDie);
+
+
+// 219. 반환 함수
+function makeBetweenFunc(min, max){
+	return function (num){
+		return num >= min && num <= max;
+	}
+}
+const testRange = function (num){
+	return num >= 100 && num <= 200;
+};
+// 이렇게 함수를 만들어 놓고 호출 할 때 
+const isChild = makeBetweenFunc(0, 18)
+// isChild를 부르면 f(num) { return num >= min && num <= max;} 가 호출 되고
+isChild(40) = false;
+isChild(7) = true;
+// 해당 num에 숫자를 기입시 조건에 맞는 값이 true, false로 나오게  됨
+
+// 220. 메서드(method) 정의
+const math =  {
+	multiply :  function(x, y) {
+		return x * y;
+	},
+	divide : function(x, y) {
+		return x / y;
+	},
+	square : function(x){
+		return x * x;
+	}
+};
+// 위의 함수를 짧게 바꾸면
+const sortMath =  {
+	multiply(x, y) {
+		return x * y;
+	},
+	divide(x, y) {
+		return x / y;
+	},
+	square(x){
+		return x * x;
+	}
+};
