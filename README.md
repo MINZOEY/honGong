@@ -196,4 +196,59 @@
 
 240. Rest 매개변수
 
-![restEx](images/restEx.png)
+![restEx](images/rest.png)
+
+241. 242.  배열 분해 / 객체 분해 / 매개변수의 분해
+
+	- 배열 분해
+
+		- 값을 해체하고 꺼내고 선정하는 간편한 방식
+
+		- 배열이나 객체에 적용할 수 있다.
+
+		- 해체해서 별개의 변수 형태로 만들 수 있다.
+
+		- 배열 순서를 따른다.
+
+	- 객체 분해
+
+		- 순서 따르지 않기에 배열 구조 분해보다 실용적
+
+		- const {개별 특성을 넣어주기} = runner;
+
+		- 이렇게 넣으면 runner.first , runner.country 라고 코드 치지 않고
+		first, country라고만 해도 해당하는 값이 나온다.
+
+		- 즉, const first = runner.first; 는 const {first} = runner; 변수 만들어주고 호출 시 first만 쳐도 값이 같다.
+
+		- 그리고 가져온 변수 명을 변경하고 싶다면 const {title : context} = runner;라고 적으면 title 특성 값이 context변수에 쓰이게 된다.
+
+		- 만약 변수에 해당하는 값이 없어서 default 값을 줘야하는 경우에는 다음과 같이 작업한다.
+
+		- const { title: context = 'N/A'} 이렇게 하면 context의 값이 있는 사람들은 원래 값이 출력되고 없는 사람들은 N/A라고 나오게 된다.
+
+	- 매개변수의 분해
+
+		- 함수의 매개변수에 적용된다.
+
+		- 객체에 주로 사용됨
+
+		- 배열 메서드에서도 자주 쓰임
+
+		- 위에서 사용한 영화 배열을 이용하면 
+			
+			- movies.filter((movie) => movie.score >= 90)
+
+			- movies.filter(({score}) => score >= 90) 이렇게 작성해도 위와 같은 결과값이 나온다.
+
+			- movies.map(movie => {return `${movie.title} (${movie.year}) is rated ${movie.score}`})
+
+			- movies.map(({title, score, year}) => {return `${title} (${year}) is rated ${score}`})라고 적어도 위와 같은 결과 값이 나온다.
+
+		- 즉, 중괄호를 사용해서 개별 변수를 만들지 않고 일일이 값을 꺼내오지 않아도 된다.
+		
+
+
+			
+
+![arrDestructingEx](images/arrDestrctiong.png)
