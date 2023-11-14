@@ -384,3 +384,30 @@ const highestRated = movies.reduce((bestMovie, currMovie) => {
 
 
 // 234. 화살표 함수와 'this'
+
+
+// 236. 기본 매개 변수
+function mix(a, b = 1){
+	return a * b;
+}
+mix(4) // 4
+mix(4, 5) // 20
+
+function say(msg = 'hey there', person, punc = '!'){
+	console.log(`${msg}, ${person} ${punc}`);
+}
+say('hi', doi)	//hi, doi!
+say('zoey')	// zoey, undefiend!  왜? 매개변수의 순서가 맞지 않아서
+
+//그렇다면 어떻게 수정해야하나?!
+function say1(person, msg='hey there', punc='!'){
+	console.log(`${msg}, ${person}${punc}`)
+}
+say('park')	// hey there, park!
+
+// 237. 함수 호출 시의 스프레드 구문
+let numArr = [2, 3, 756, 34, 234, 54523, 234245, 1, 34, 66]
+
+Math.max(numArr)	// NaN
+Math.max(...numArr)	// 234245
+
