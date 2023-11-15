@@ -271,11 +271,13 @@
 	- 중괄호는 무엇이든 안에 있는 콘텐츠를 받아서 자바스크립트로 취급하고 평가한 다음, 그걸 받아서 요소의 출력에 추가함.
 
 	```javascript
+
 		function Dog(){
 		const pet = 'bebe';
 		return <p>{pet} says wongwong!!</p>
 		}
 
 		export default Dog;
+		
 	```
 	- 이렇게 중괄호를 사용하면 동적 값으로 컴포넌트에 추기하는 방법이다.
