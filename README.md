@@ -246,9 +246,35 @@
 			- movies.map(({title, score, year}) => {return `${title} (${year}) is rated ${score}`})라고 적어도 위와 같은 결과 값이 나온다.
 
 		- 즉, 중괄호를 사용해서 개별 변수를 만들지 않고 일일이 값을 꺼내오지 않아도 된다.
-		
-
-
-			
 
 ![arrDestructingEx](images/arrDestrctiong.png)
+
+
+<hr>
+
+## 리액트 알고가기
+
+600. 리액트 Fragment(프래그먼트) <></>
+
+	- return 뒤에  <></> 로 감싸주는데 그 이유는,
+
+	- 불필요한 부모 DOM 레이어를 만들지 않고 여러 자식 요소를 그룹화하는 데 사용됨.
+
+	- 리액트 컴포넌트는 하나의 루트 요소만을 반환해야 하기 때문에, 여러 요소를 래핑하기 위해 Fragment를 사용함.
+
+	- 가상 DOM에서 성능을 최적화하는 데 도움됨.
+
+	- 즉, Fragment를 사용하면 불필요한 DOM 계층을 추가로 생성하지 않고도 여러 자식 요소를 그룹화할 수 있다.
+
+601. JSX에서 JS표현식
+
+	- 중괄호는 무엇이든 안에 있는 콘텐츠를 받아서 자바스크립트로 취급하고 평가한 다음, 그걸 받아서 요소의 출력에 추가함.
+
+	```function Dog(){
+		const pet = 'bebe';
+		return <p>{pet} says wongwong!!</p>
+		}
+
+		export default Dog;
+	```
+	- 이렇게 중괄호를 사용하면 동적 값으로 컴포넌트에 추기하는 방법이다.
