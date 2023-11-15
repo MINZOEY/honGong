@@ -1,0 +1,9 @@
+.DieRoll {
+	border: 1px solid black;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+.DieRoll h1{
+	font-weight: 600;
+	color: green;
+}
