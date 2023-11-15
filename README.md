@@ -270,7 +270,8 @@
 
 	- 중괄호는 무엇이든 안에 있는 콘텐츠를 받아서 자바스크립트로 취급하고 평가한 다음, 그걸 받아서 요소의 출력에 추가함.
 
-	```function Dog(){
+	```javascript
+		function Dog(){
 		const pet = 'bebe';
 		return <p>{pet} says wongwong!!</p>
 		}
