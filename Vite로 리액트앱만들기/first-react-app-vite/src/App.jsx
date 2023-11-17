@@ -1,12 +1,11 @@
 import './App.css';
-import Pet from './pet';
-
+import Greeter from './Greeter';
 function App() {
   return (
     <>
-     <Pet />
-     <Pet />
-     <Pet />
+    <Greeter person= 'Joy' /> 
+    <Greeter person= 'Rose' /> 
+    <Greeter person= 'Ted' /> 
     </>
   )
 }

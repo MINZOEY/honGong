@@ -302,4 +302,28 @@
 
 609. vite로 리액트 앱 실행
 
-- 중요도가 높은 일반적인 스타일은 모두 index.css에 넣고 컴포넌트의 특징적인 것은 해당 컴포넌트 스타일 시트에 넣자! 👈 비트의 기능임
+- 중요도가 높은 일반적인 스타일은 모두 index.css에 넣고 컴포넌트의 특징적인 것은 해당 컴포넌트 스타일 시트에 넣자! 👈 비트의 기능임 
+
+610. 프로퍼티 Props
+
+- props를 사용하면 전달된 인수를 컴포넌트에서 받아서 사용할 수 있다.
+
+- props를 개별 컴포넌트에 전달하는 방법 
+``` <Pet name= 'merry'/> <Pet name = 'Ted'/>```
+
+- 예를 들면
+```js
+	function Greeter(props){
+	console.log(props);
+	return(
+	<h1>hi there! </h1>
+	)
+}
+export default Greeter;
+```
+이렇게 작성하면 콘솔에는 다음과 같이 찍힌다. 객체 전체가 넘어오게 된다.
+![props](images/propsEx.png)
+
+console.log(props.person)이라고 하면 Joy만 출력되게 된다.
+
+⭐️	props는 함수를 실행하지 않는 추상화 계층일 뿐!!!
