@@ -406,3 +406,27 @@ return (
 )
 ```
 
+616. 동적 컴포넌트 스타일 추가
+
+- true, false 값에 따라서 스타일 다르게 적용하기 위해선
+
+- div, h2 또는 그 어떤 요소에든 인라인으로 직접 스타일과 자바스크립트 오브젝트를 제공한다. 스타일에 오브젝트를 제공할 수 있다.
+
+- const style = 다음에 자바스크립트 오브젝트를 넣고 key-value 값을 쌍으로 설정해서 색상 등의 css 프로퍼티를 연결한다. ```const styles = { color : 'skyblue'}```
+
+- ⭐️ 주의할 점! 
+1. 첫 번째 중괄호는  JSX를 자바스크립트를 작성하는 것을 뜻하고
+
+2. 두 번째 중괄호는 오브젝트를 지정하는 것이다. 
+
+- 예를 들면
+``` const styles = {color: num1 === num2 ? 'skyblue' : 'red' }; ``` 이렇게 작성하면 오브젝트를 생성하게 된다.
+
+![styleObject](images/styleobject.png)
+
+617. Map으로 배열 렌더링
+
+- ``` const lis = colors.map((color) =><li>{color}</li>); ``` 이런식으로 colors라는 배열에 map을 돌리게 되면 요소 하나하나가 li에 출력되어 나온다.
+
+- 보통 많이 쓰이는 방법은 인라인으로 사용하여 반환문(return) 안에서 맵핑하게 된다.
+``` <ul>{ colors.map((color) => <li>{color}</li>)}```
