@@ -430,3 +430,23 @@ return (
 
 - 보통 많이 쓰이는 방법은 인라인으로 사용하여 반환문(return) 안에서 맵핑하게 된다.
 ``` <ul>{ colors.map((color) => <li>{color}</li>)}```
+```js
+export default function Slots({val1, val2, val3}){
+	const isWinner = val1 === val2 &&  val1 === val3
+	return(
+		<div>
+			<h1>
+				{val1}
+				{val2}
+				{val3}
+			</h1>
+			<h2>You Win!!!</h2>
+			<h2 style={{color : isWinner ? 'green' : 'red'}}>
+				{ isWinner ? "You Win!!!" : "You Lose ~"}
+			</h2>
+			{isWinner && <h3>Congrats!!!</h3>}
+		</div>
+	);
+}
+```
+이렇게 isWinner의 값이 같다면 논리(&&) 연산자를 이용해서 true값에 원하는 것을 기입하면 출력된다.
