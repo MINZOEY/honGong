@@ -1,7 +1,11 @@
-function Greeter(props){
-	// console.log(props.person);
+function Greeter({person = 'everyone', from= 'anonymous'}){
+	// console.log(person);
 	return(
-	<h1>hi there, {props.person}!!! </h1>
+		<>
+			<h1>hi there, {person}!!! </h1>
+			<h2>-{from}</h2>
+		</>
+	
 	)
 }
 export default Greeter;
