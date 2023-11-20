@@ -355,4 +355,54 @@ console.log(props.person)이라고 하면 Joy만 출력되게 된다.
 
 613. 배열 및 오브젝트 전달
 
-- 
+- {}중괄호 안에 []을 넣어줘야 배열의 값이 나온다 {[]} 
+
+- 오브젝트를 전달할 땐 중괄호를 사용해야 한다. ```{{a: 1, b: 2}}```
+
+614. 리액트 조건문
+
+- true or false에 따라서 출력되는 값이 다르게 나오게 만들기
+즉, 삼항 연산자를 이용
+
+- 예시
+1. 
+ ```js
+	const result = num1 === num2 ? 'You Win!!' : 'You Lose :(' ;
+		return (
+		<div>
+			<h2> {result} </h2>
+		</div>
+		)
+```	
+
+ 2. 
+ ```js
+ return (
+		<div>
+			<h2>{ num1 === num2 ? 'You Win!!' : 'You Lose :(' } </h2>
+			<p>Num1 : {num1}</p>
+			<p>Num2 : {num2}</p>
+		</div>
+	)
+ ```
+
+3. 
+```js
+return (
+	<div>
+		<h2>Double Dice</h2>
+		{num1 === num2 ? <h3>You Win!!</h3> : null} 
+	</div>
+)
+```
+
+4. 
+```js
+return (
+	<div>
+		<h2>Double Dice</h2>
+		{ num1 === num2 && <h3>You Win!! </h3> }
+	</div>
+)
+```
+
