@@ -458,3 +458,33 @@ export default function Slots({val1, val2, val3}){
 - key라는 이름의 각 li에 고유한 식별자를 추가해야 함
 
 - ⭐️ 리스트 내 순서를 재배치할 때는 key 프로퍼티는 꼭 필요!!
+
+- 전달하는 인자가 같은 순서로 정확하게 위치하면 전개 연산자, 즉 spread 연산자(...)룰 사용할 수 있다. 예를 들어
+``` <ShoppingListItem key = {i.id}{...i}``` 이런식으로 i에서 모든 값, 모든 키-값쌍을 가져와 개별적으로 전달한다.
+
+624. ESLint 구성
+
+- ESLint 덕분에 브라우저에서 오류를 직접 마주하기 전 vs코드가 미리 오류를 알려준다.
+
+- 프로퍼티를 작성할 때마다 오류 메세지가 계속 뜨기 때문에 Eslint를 살펴보면 프러퍼티 유효성 검사, prop-types에 대한 어류 경고가 뜬다. (프로퍼티유형을 정의하도록 도와줌)
+
+- 프로퍼티 속성을 지정하지 않으면 경고하도록 사전 구성되어 있다.
+
+- .eslintrc.cjs 파일 -> rules항목에 ```"react/prop-types": "off"```라고 추가 -> vs 코드 명령 팔레트 열기(command, shift, p 누르고 eslint서버 재시작을 검색) -> 새로 설정한 규칙을 사용해 서버가 재시작 됨 -> 그러면 오류가 이제 뜨지 않고 속성을 정의해도 뜨지 않음
+
+625. PropTypes 라이브러리 속성
+
+- PropTypes를 가져와서 주어진 컴포넌트에 이 오브젝트로 설정하는 것.
+
+```js
+ShoppingListItem.propTypes = {
+	item : PropTypes.string,
+	quantity : PropTypes.number,
+	completed : PropTypes.bool
+}
+```
+
+- [PropTypes속성에 대한 정보] (https://www.npmjs.com/package/prop-types)
+
+- 작동하는 법은 같다. prop-types를 가져와 컴포넌트에서 propTypes라는 프로퍼티를 정의하면 된다.
+
