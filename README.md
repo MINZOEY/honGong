@@ -1,4 +1,4 @@
-## 혼공 기록용(The Web Developer 부트캠프 2023 강의정리)
+## honGong 기록용(The Web Developer 부트캠프 2023 강의정리)
 
 214. 함수 범위
 
