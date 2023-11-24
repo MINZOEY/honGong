@@ -488,3 +488,24 @@ ShoppingListItem.propTypes = {
 
 - 작동하는 법은 같다. prop-types를 가져와 컴포넌트에서 propTypes라는 프로퍼티를 정의하면 된다.
 
+
+628. 이벤트 오브젝트 사용
+
+- form 태그에 onSubmit을 넣어주어 양식 제출해주기
+
+- 대신 제출하는 버튼 누르면 페이지가 새로고침되는게 보이니까 핸들 이벤트에 다음과 같이 작성해준다.(기본 동작을 막아준다)
+
+```js
+function handleSubmit(e){
+	e.preventDefault();
+	console.log('양식제출하기');
+}
+export default function Form(){
+	return(
+		<form onSubmit={handleSubmit}>
+			<button>submit</button>
+		</form>
+	);
+}
+```
+- 제출하는 이벤트의 처리 경우에는 매개변수 이름을 넣으면 리액트를 사용하지 않았을 때 액세스 할 수 있는 모든 정규 이벤트 메서드에 액세스할 수 있다.

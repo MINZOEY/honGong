@@ -1,5 +1,6 @@
 import Anb from './Anb';
 import './App.css';
+import Clicker from './Clicker';
 import ColorList from './ColorList';
 import Die from './Die';
 import DoubleDice from './DoubleDice';
@@ -28,7 +29,10 @@ const properties = [
 function App() {
   return (
     <>
-    <Anb properties={properties} />
+    <Clicker message="hi!" buttonText="Click me!" />
+    <Clicker message="please stop clicking me!!!!!!!!" buttonText="do not click" />
+    
+    {/* <Anb properties={properties} /> */}
     {/* <ShoppingList items={data}  /> */}
 
       {/* <Slots val1='🍒' val2='🍒' val3='🍒'/>
