@@ -5,7 +5,7 @@ export default function Clicker({message, buttonText}){
 	return(
 		// <button onClick={()=>alert(message)}>{buttonText}
 		// </button>
-		// 또는 
+		// 또는 변수로 만들어서.
 		<button onClick={handleClick}>{buttonText}
 		</button>
 	);
